@@ -1,12 +1,17 @@
-# Application Description
+Write application description 2-5 sentences, regex implementation description 4-10 sentences, information on how to run the developed application locally for README.md file.
+ChatGPT
+Certainly! Here's content for your README.md:
+
+Application Description
 This application provides a utility for string validation based on custom criteria. It ensures the input string contains at least one uppercase letter, one lowercase letter, one digit, and one special character from a predefined list, while also checking for the absence of whitespace characters. Additionally, the utility considers a dynamically provided string length as part of the validation criteria.
 
-# Regex Implementation Description
+Regex Implementation Description
 The heart of the validation utility is a regular expression (regex) that checks the various criteria. The regex works by using positive lookaheads (?=) for each of the conditions like having an uppercase letter, lowercase letter, digit, and a special character from a predefined list. The absence of whitespace characters is also enforced in the regex pattern. A noteworthy feature is the dynamic integration of a user-defined length into the regex pattern. The regex is constructed at runtime using the length parameter, ensuring flexibility in validation criteria.
 
-# Running the Application Locally
-- Ensure you have Java installed on your machine.
-- Navigate to the root directory of the project using your terminal or command prompt.
-- Compile the application using the command: javac YourMainClass.java (Replace YourMainClass with the name of your main Java class.)
-- Run the compiled application with the command: java YourMainClass
-- Follow any on-screen prompts or instructions to use the application.
+Running the Application Locally
+Ensure you have Java installed on your machine.
+Navigate to the root directory of the project using your terminal or command prompt.
+Compile the application using the command: javac YourMainClass.java (Replace YourMainClass with the name of your main Java class.)
+Run the compiled application with the command: java YourMainClass
+Follow any on-screen prompts or instructions to use the application.
+You might need to adjust the "Running the Application Locally" section based on your project's structure or if you're using build tools like Maven or Gradle. The placeholders like YourMainClass should be replaced with specifics from your project.
