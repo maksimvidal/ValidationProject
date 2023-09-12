@@ -13,7 +13,7 @@ public class StringValidator {
      * @param length   The expected length of the string.
      * @return         true if the string meets the criteria, false otherwise.
      */
-    public static boolean isValid(String s, int length) {
+    public boolean isValid(String s, int length) {
         // Regular expression to check the criteria
         String regex = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[" + Pattern.quote(SPECIAL_CHARS) + "])[^\\s]{" + length + "}$";
 
