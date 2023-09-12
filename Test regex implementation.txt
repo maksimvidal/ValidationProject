@@ -1,0 +1,62 @@
+Create tests for StringValidator and length 5. Tests should cover the following cases: input string length is bigger then provided length, string length matching input length, missing lowercase letter, missing uppercase letter , missing special character, missing digit, excess whitespace
+ChatGPT
+Certainly! Here's a set of tests using JUnit for the StringValidator class with the length parameter set to 5:
+
+First, ensure you have the JUnit library in your project.
+
+Now, let's write the tests:
+
+java
+Copy code
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class StringValidatorTest {
+
+    private final int length = 5;
+
+    @Test
+    public void testInputExceedsLength() {
+        String input = "Aa1!78"; // 6 characters
+        assertFalse(StringValidator.isValid(input, length));
+    }
+
+    @Test
+    public void testInputMatchesLength() {
+        String input = "Aa1!7"; // 5 characters
+        assertTrue(StringValidator.isValid(input, length));
+    }
+
+    @Test
+    public void testMissingLowercaseLetter() {
+        String input = "A12!7";
+        assertFalse(StringValidator.isValid(input, length));
+    }
+
+    @Test
+    public void testMissingUppercaseLetter() {
+        String input = "a12!7";
+        assertFalse(StringValidator.isValid(input, length));
+    }
+
+    @Test
+    public void testMissingSpecialCharacter() {
+        String input = "Aa123";
+        assertFalse(StringValidator.isValid(input, length));
+    }
+
+    @Test
+    public void testMissingDigit() {
+        String input = "Aab!!";
+        assertFalse(StringValidator.isValid(input, length));
+    }
+
+    @Test
+    public void testExcessWhitespace() {
+        String input = "Aa1 !";
+        assertFalse(StringValidator.isValid(input, length));
+    }
+}
+The above tests utilize JUnit 5. Each test is annotated with @Test, and the assertions are made using the JUnit's assertTrue and assertFalse methods.
+
+You can run these tests using your IDE's built-in test runner or through your build tool. If all the tests pass, then the StringValidator behaves as expected for the provided scenarios and length.
